@@ -3,11 +3,11 @@ This folder contains front end web design
 
 ## Example 1
 
-![alt tag](https://github.com/alexkeaveney/XsAndOs/blob/master/dance.gif)
+![alt tag](https://github.com/alexkeaveney/HTML-and-CSS/blob/master/dance.gif)
 
 ## Example 1
 
-![alt tag](https://github.com/alexkeaveney/XsAndOs/blob/master/wave.gif)
+![alt tag](https://github.com/alexkeaveney/HTML-and-CSS/blob/master/wave.gif)
 
 ## Getting Started
 
