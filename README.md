@@ -2,10 +2,12 @@
 This folder contains front end web design
 
 ## Example 1
+CSS3 Animation
 
 ![alt tag](https://github.com/alexkeaveney/HTML-and-CSS/blob/master/dance.gif)
 
-## Example 1
+## Example 2
+CSS3 Animation
 
 ![alt tag](https://github.com/alexkeaveney/HTML-and-CSS/blob/master/wave.gif)
 
