@@ -1,0 +1,126 @@
+/*--------------------------------------------------------------------
+    This section contains the styles for the background "body"
+--------------------------------------------------------------------*/
+
+    /* defines the animation for the body. Every second the background colour alternates */
+
+    /* for mozilla support */
+    @-moz-keyframes NiceBody {
+        10%   { background-color: darkviolet;  }
+        20%   { background-color: deeppink;    }
+        30%   { background-color: deepskyblue; }
+        40%   { background-color: gold;        } 
+        50%   { background-color: greenyellow; }
+        60%   { background-color: indianred;   }
+        70%   { background-color: orangered;   }
+        80%   { background-color: hotpink;     }
+        90%   { background-color: salmon;      }
+        100%  { background-color: yellowgreen; }
+    }
+    
+    /* for internet explorer / bing support */
+    @-ms-keyframes NiceBody {
+        10%   { background-color: darkviolet;  }
+        20%   { background-color: deeppink;    }
+        30%   { background-color: deepskyblue; }
+        40%   { background-color: gold;        }
+        50%   { background-color: greenyellow; }
+        60%   { background-color: indianred;   }
+        70%   { background-color: orangered;   }
+        80%   { background-color: hotpink;     }
+        90%   { background-color: salmon;      }
+        100%  { background-color: yellowgreen; }
+    }
+      
+    /* opera / chrome support */
+    @-webkit-keyframes NiceBody {
+        10%   { background-color: darkviolet;  }
+        20%   { background-color: deeppink;    }
+        30%   { background-color: deepskyblue; }
+        40%   { background-color: gold;        }
+        50%   { background-color: greenyellow; }
+        60%   { background-color: indianred;   }
+        70%   { background-color: orangered;   }
+        80%   { background-color: hotpink;     }
+        90%   { background-color: salmon;      }
+        100%  { background-color: yellowgreen; }
+    }
+
+    /* Standard Syntax */
+    @keyframes NiceBody {
+        10%   { background-color: darkviolet;  }
+        20%   { background-color: deeppink;    }
+        30%   { background-color: deepskyblue; }
+        40%   { background-color: gold;        }
+        50%   { background-color: greenyellow; }
+        60%   { background-color: indianred;   }
+        70%   { background-color: orangered;   }
+        80%   { background-color: hotpink;     }
+        90%   { background-color: salmon;      }
+        100%  { background-color: yellowgreen; }    
+    }
+
+    /* 
+        The animation above is added to the element "the body" below 
+        The total duration is 10s, the animation name links the animation above.
+        The next keywords keep the animation on repeat
+    */
+    body {
+        -moz-animation:10s NiceBody infinite alternate; /* mozilla support */
+        -ms-animation:10s NiceBody infinite alternate;  /* bing / internet explorer */
+        -webkit-animation:10s NiceBody infinite alternate; /* chrome / opera */
+        animation:10s NiceBody infinite alternate; /* standard syntax */
+    }
+
+/*--------------------------------------------------------------------
+    This section contains the styles for the text "dance"
+--------------------------------------------------------------------*/
+
+    /* defines the animation for the text. Every half second the text "blinks" and changes size */
+
+    /* mozilla support */
+    @-moz-keyframes NiceText {
+        0%   { opacity: 0; font-size: 12pt; }
+        100% { opacity: 1; font-size: 40pt; }
+    }
+    
+    /* for internet explorer / bing support */
+    @-ms-keyframes NiceText {
+        0%   { opacity: 0; font-size: 12pt; }
+        100% { opacity: 1; font-size: 40pt; }
+    }
+    
+    /* chrome / opera support */
+    @-webkit-keyframes NiceText {
+        0%   { opacity: 0; font-size: 12pt; }
+        100% { opacity: 1; font-size: 40pt; }
+    }
+
+    /* Standard Syntax */
+    @keyframes NiceText {
+        0%   { opacity: 0; font-size: 12pt; }
+        100% { opacity: 1; font-size: 40pt; }    
+    }
+
+    /* the animation is added to the text in this style */
+    h1 {
+        
+        /* The animations duration is half a second and is on repeat. */
+        animation:0.5s NiceText infinite alternate; /* standard syntax */
+        -moz-animation:0.5s NiceText infinite alternate; /* firefox support */
+        -ms-animation:0.5s NiceText infinite alternate; /* microsoft support */
+        -webkit-animation:0.5s NiceText infinite alternate; /* chrome / opera */
+                
+        /* extra styles to make the text look nice and center it in the screen */
+        text-align: center; 
+        position: absolute; 
+        top: 40%; 
+        bottom: 50%; 
+        width: 100%;
+        font-family: sans-serif;
+        color: white;
+        font-size: 40pt;
+                
+    }
+
+/*---------------------------------End of styles.css---------------------------------------*/

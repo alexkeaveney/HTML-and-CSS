@@ -1,0 +1,173 @@
+/*-------------------------------------------------------------------------             
+This section contains the styles for the background animation     
+-------------------------------------------------------------------------*/             
+/* The height is increased from 1px to 100% of the screen */
+            
+    
+
+    /* chrome / safari support */
+    @-webkit-keyframes bg { 
+        0%   { 
+                height: 1px;
+                background-color: yellow;    
+             }
+        100% { 
+                height: 100%;
+                background-color: greenyellow;
+             }
+    }
+            
+    /* firefox support */
+    @-moz-keyframes bg { 
+        0%   { 
+                height: 1px;
+                background-color: yellow;    
+             }
+        100% { 
+                height: 100%;
+                background-color: greenyellow;
+             }
+    }
+            
+    /* opera support */
+    @-o-keyframes bg { 
+        0%   { 
+                height: 1px;
+                background-color: yellow;    
+             }
+        100% { 
+                height: 100%;
+                background-color: greenyellow;
+        }
+    }
+
+    /* standard syntax */
+    @keyframes bg { 
+        0%   { 
+                height: 1px;
+                background-color: yellow;    
+             }
+        100% { 
+                height: 100%;
+                background-color: greenyellow;
+             }
+    }
+                        
+    /* The background element the animation 'bg' is applied to */
+    div { 
+        -moz-animation:2s bg;
+        -ms-animation:2s bg;
+        -webkit-animation:2s bg;
+                
+        /* animation is only played once */
+        animation-iteration-count: 1;
+        -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+                
+        /* animation stays at 100% complete */
+        animation-fill-mode:forwards;
+    }
+            
+    /* removes spacing between body and div */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+            
+            
+/*-------------------------------------------------------------------------
+            This section contains the styles for the waving hand
+-------------------------------------------------------------------------*/            
+            
+    /* defines the animation for the hand to appear */
+    @keyframes appear {
+                
+        /* starts hidden */
+        0% { opacity: 0; } 
+                
+        /* stays hidden until 70% of the animation */
+        70% { opacity: 0; } 
+                
+        /* appears fully by 100% */
+        100% { opacity: 1; } 
+            
+    }
+            
+    /* 
+        defines the animation for the hand to wave (rotate) 
+        provides support to all the browsers for the rotation property
+        moves the hand between -45 and 45 degrees throughout the animation
+        stops at 0deg at the end.
+    */
+    @keyframes wave {                                               
+        0% {
+            -webkit-transform:rotate(-45deg);
+            -moz-transform:rotate(-45deg); 
+            -o-transform:rotate(-45deg); 
+        }
+        20% {
+            -webkit-transform:rotate(45deg);
+            -moz-transform:rotate(45deg); 
+            -o-transform:rotate(45deg);
+        }
+        40% {
+            -webkit-transform:rotate(-45deg);
+            -moz-transform:rotate(-45deg); 
+            -o-transform:rotate(-45deg); 
+        }
+        60% {
+            -webkit-transform:rotate(45deg);
+            -moz-transform:rotate(45deg); 
+            -o-transform:rotate(45deg);
+        }
+        80% {
+            -webkit-transform:rotate(-45deg);
+            -moz-transform:rotate(-45deg); 
+            -o-transform:rotate(-45deg); 
+        }
+        100% {
+            -webkit-transform:rotate(0deg);
+            -moz-transform:rotate(0deg); 
+            -o-transform:rotate(0deg); 
+        }
+    }
+            
+    /* This controls the hand */
+    .wave {
+        
+        /* sets anchors to bottom middle for font icon */
+        -ms-transform-origin: center bottom; /* IE 9 */
+        -webkit-transform-origin: center bottom; /* Chrome, Safari, Opera */
+        transform-origin: center bottom; /* standard syntax*/
+                
+        /* This animation is played after 4 seconds */
+        animation-delay: 4s;
+                
+        /* 
+            This sets the animation to the element 
+            The 2s and 4s are the durations of each animation     
+        */
+        animation: : 2s appear, 4s wave; /* standard syntax */
+        -moz-animation:2s appear, 4s wave; /* firefox support */
+        -ms-animation:2s appear, 4s wave; /* microsoft support */
+        -webkit-animation:2s appear, 4s wave; /* chrome support */
+                
+        /* how many times the animations will be played */
+        animation-iteration-count: 1; /* standard syntax */
+        -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+                
+        /* The animations will stay at 100% */
+        animation-fill-mode:forwards;
+                
+        /* The below styles put the text in the center of the screen and make it look nicer */
+        text-align: center; 
+        position: absolute; 
+        top: 40%; 
+        bottom: 50%; 
+        width: 100%;
+        color: darkcyan;
+        font-size: 70pt;
+    }
+            
+
+
+/*----------------------------End of styles.css-----------------------------*/
